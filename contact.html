@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Seitentitel setzen! -->
+    <title>Kontakt - My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+    <link rel="icon" type="image/ico" href="favicon.ico">
+</head>
+
+<body>
+    <!-- Seiteninhalt -->
+    <!-- SEMANTIK: header, nav, main, footer -->
+    <header id="about">
+        <h1><span>Kontakt</span></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li id="active"><a href="contact.html">Kontakt</a></li>
+            <li><a href="https://booking.photogra.ph" target="_blank">Buchen</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="content">
+            <h1>Ihr weg zu mir..</h1>
+            <br>
+            <div class="contact-form">
+                <h3>Kontaktformular</h3>
+                <br>
+                <form action="" method="POST">
+                    <label for="fname">Vorname</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Vorname">
+                    <br>
+                    <label for="lname">Nachname</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Nachname">
+                    <br>
+                    <label for="lname">Betreff</label>
+                    <input type="text" id="subject" name="subject" placeholder="Betreff">
+                    <br>
+                    <label for="subject">Nachricht</label>
+                    <textarea id="message" name="message" placeholder="Schreiben Sie hier..." style="height:200px"></textarea>
+                    <br>
+                    <button type="submit"><i class=" fas fa-paper-plane "></i>&nbsp;&nbsp;Ab die Post</button>
+                </form>
+            </div>
+            <br>
+            <section id="contact">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745023.404052234!2d8.991877835954483!3d47.78751861416613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd8cc180895c9%3A0x87dc71f6debc3291!2sMY%20PORTFOLIO!5e0!3m2!1sde!2sch!4v1582293305791!5m2!1sde!2sch"
+                    width="50%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <address>
+                    <h3>photogra.ph</h3>
+                    <p>Hauptstrasse 156</p>
+                    <p>9000 St.Gallen</p>
+                </address>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2020 My Portfolio</p>
+        <address>
+            <p>photogra.ph</p>
+            <p>Hauptstrasse 156</p>
+            <p>9000 St.Gallen</p>
+        </address>
+    </footer>
+</body>
+
+</html>

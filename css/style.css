@@ -1,0 +1,421 @@
+@charset "UTF-8";
+
+/* Google Font
+Bree Serif & Open Sans */
+
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans&display=swap');
+
+/* Font Awesome */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css');
+
+/* CSS Variabeln */
+
+:root {
+    --blue-dark: #225378;
+    --blue: #1595A3;
+    --blue-light: #ACF0F2;
+    --yellow-light: #F2FFE3;
+    --orange: #EB7F00;
+}
+
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: auto;
+    height: 100vh;
+    /* grid system*/
+    width: auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 1fr 120px;
+    grid-template-areas: "menu" "header" "main" "footer";
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    font-family: 'Bree Serif', sans-serif;
+}
+
+
+/* header  */
+
+header#home {
+    background-image: url("../img/header/header_home.jpg");
+}
+
+header#services {
+    background-image: url("../img/header/header_services.jpg");
+}
+
+header#about {
+    background-image: url("../img/header/header_about.jpg");
+}
+
+header {
+    grid-area: header;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 30px;
+    /* height: 50vh; */
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+header>h1 {
+    color: var(--blue-light);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 3em;
+}
+
+header>h1>span {
+    color: var(--orange);
+    margin-top: 10px;
+}
+
+
+/* end header  */
+
+
+/* nav  */
+
+nav {
+    grid-area: menu;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+}
+
+nav ul {
+    overflow: hidden;
+    background-color: var(--blue);
+    height: 100%;
+}
+
+nav li a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav li#active a {
+    background-color: var(--blue-dark);
+    color: white;
+}
+
+nav li a:hover {
+    background-color: var(--blue-light);
+    color: black;
+}
+
+
+/* end nav */
+
+
+/* main */
+
+main {
+    grid-area: main;
+    background-color: lightgrey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* center */
+    text-align: center;
+}
+
+main>.content {
+    display: block;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+img#img-me {
+    width: 50vw;
+}
+
+main ul {
+    list-style: none;
+}
+
+.mt {
+    margin-top: 20px;
+}
+
+
+/* Hyperlink Reset */
+
+main a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+main a:hover {
+    color: var(--blue-dark);
+    font-weight: bolder;
+}
+
+main img#me {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+}
+
+main div.about-me {
+    display: flex;
+}
+
+main div.about-me>p {
+    margin-left: 5vw;
+    text-align: justify;
+}
+
+
+/* section#contact {
+    display: flex;
+    margin-bottom: 40px;
+} */
+
+section#contact address {
+    font-style: normal;
+    display: inline-block;
+    text-align: left;
+}
+
+
+/* section#contact iframe {
+    font-style: normal;
+    display: inline-block;
+} */
+
+section#contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+section#contact>* {
+    width: 100%;
+    margin: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center !important;
+}
+
+img.hochzeit {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    border-radius: 20% !important;
+}
+
+main table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+main td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+main tr:nth-child(even) {
+    background-color: var(--yellow-light);
+}
+
+main tr:nth-child(odd) {
+    background-color: white;
+}
+
+main th {
+    background-color: var(--orange);
+}
+
+main #tr-weit {
+    width: 60%;
+}
+
+main tr.color {
+    font-style: italic;
+}
+
+main hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, var(--blue), var(--blue-dark), var(--blue));
+}
+
+
+/* contact form */
+
+main form {
+    margin-bottom: 50px;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+button[type=submit] {
+    background-color: var(--blue-dark);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--blue);
+}
+
+
+/* end contact form */
+
+
+/* end main */
+
+
+/* footer */
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: var(--orange);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer address p {
+    text-decoration: none !important;
+    font-style: normal;
+    font-size: smaller;
+}
+
+footer>p {
+    margin-bottom: 10px;
+}
+
+
+/* end footer */
+
+@media (max-width: 900px) and (min-width: 450px) {
+    header {
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+    main div.about-me {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main div.about-me>img {
+        margin-top: 30px;
+        width: 30vw !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section#contact {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    section#contact>* {
+        width: 100%;
+        margin: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 450px) {
+    header {
+        padding-top: 40%;
+        padding-bottom: 40%;
+    }
+    main div.about-me {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main div.about-me>img {
+        margin-top: 30px;
+        width: 50vw !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section#contact {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    section#contact>* {
+        width: 100%;
+        margin: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center !important;
+    }
+}
